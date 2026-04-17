@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "TMC PDF Blocker",
+    "version": "1.0",
+    "description": "Redirect Netsuite PDF links from Data Sheets to a local blocked page.",
+    "content_scripts": [
+        {
+            "matches": ["https://www.themetalcompany.co.nz/*"],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ]
+}
