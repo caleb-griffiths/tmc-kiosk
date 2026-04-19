@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-cd /home/$(whoami)/kiosk-setup/local-web
+BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$BASE_DIR/local-web"
 python3 -m http.server 8080
