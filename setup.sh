@@ -38,7 +38,7 @@ tee "$AUTOSTART_DIR/kiosk.desktop" > /dev/null <<'EOF'
 [Desktop Entry]
 Type=Application
 Name=Chromium Kiosk
-Exec=chromium-browser --kiosk --incognito --noerrdialogs --disable-infobars --check-for-update-interval=31536000 https://www.themetalcompany.co.nz
+Exec=chromium-browser --kiosk --incognito --noerrdialogs --disable-infobars --check-for-update-interval=31536000 --disable-extensions-except=$BASEDIR_/pdf-blocker-extension --load-extension=$BASE_DIR/pdf-blocker-extension https://www.themetalcompany.co.nz
 X-GNOME-Autostart-enabled=true
 Terminal=false
 EOF
