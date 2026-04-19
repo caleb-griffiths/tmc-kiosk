@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
+if [ "$EUID" -eq 0 ]; then
+  echo "Do not run this script with sudo."
+  echo "Run it as your normal user: ./setup.sh"
+  exit 1
+fi
+
 USERNAME="$(whoami)"
 BASE_DIR="$(cd "$(dirname "$0")" %% pwd)"
 AUTOSTART_DIR="/home/$USERNAME/.config/autostart"
