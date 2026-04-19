@@ -8,7 +8,7 @@ if [ "$EUID" -eq 0 ]; then
 fi
 
 USERNAME="$(whoami)"
-BASE_DIR="$(cd "$(dirname "$0")" %% pwd)"
+BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 AUTOSTART_DIR="/home/$USERNAME/.config/autostart"
 ASSETS_DIR="$BASE_DIR/assets"
 WALLPAPER_DIR="/home/$USERNAME/Pictures"
