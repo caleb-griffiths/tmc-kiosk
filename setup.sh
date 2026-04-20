@@ -83,7 +83,7 @@ if [ -f "$WALLPAPER_FILE" ]; then
   done
 fi
 
-echo "Setup complete. Please reboot now."
 echo
-echo "After reboot, please load the unpacked Chromium extension from:"
+echo "***Setup complete. Please reboot now***"
+echo "***Unpacked Chromium Extension can be found here:***"
 echo "$BASE_DIR/pdf-blocker-extension"
