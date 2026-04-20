@@ -4,6 +4,10 @@
 
 Xubuntu 24.04
 
+## Scope
+
+An automated installation for setting up The Metal Company's kiosks in the Trade Store
+
 ## Installation
 1) Firstly open the terminal with
 ```
