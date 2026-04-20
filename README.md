@@ -80,5 +80,5 @@ Once installation is complete and the Chromium Extension is active, there is not
 
 ## Authors
 
-Caleb Griffiths
+Caleb Griffiths  
 Contact: [caleb.griffiths@themetalcompany.co.nz](mailto:caleb.griffiths@themetalcompany.co.nz)
