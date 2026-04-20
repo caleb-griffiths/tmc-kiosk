@@ -17,7 +17,7 @@ Running `setup.sh` will update the following:
 
 ## Prerequisites
 
-Xubuntu 24.04
+[Xubuntu 24.04](https://xubuntu.org/release/24.04/)
 
 ## Installation
 1) Firstly open the terminal with
