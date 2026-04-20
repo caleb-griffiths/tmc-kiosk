@@ -1,12 +1,23 @@
 # TMC Kiosk
 
+## About
+
+An automated installation for setting up The Metal Company's kiosks once `Xubuntu 24.04` has been installed.
+
+Running `setup.sh` will update the following: 
+
+1) Installs: `chromium-broswer` (`chromium` if `chromium-browser` fails) and `git`
+2) Sets the device to log-in automatically on startup
+3) Auto-starts Chromium with [our website](https://www.themetalcompany.co.nz) in kiosk mode
+4) Disables sleep timers
+5) Applies branded wallpaper
+6) Creates Chromium extension (PDF Blocker Extension)
+
+# Getting Started
+
 ## Prerequisites
 
 Xubuntu 24.04
-
-## Scope
-
-An automated installation for setting up The Metal Company's kiosks in the Trade Store
 
 ## Installation
 1) Firstly open the terminal with
@@ -62,3 +73,12 @@ tmc-kiosk/pdf-blocker-extension
 6) Click `Add Folder`
 
 The extension should now be active.
+
+## Usage
+
+Once installation is complete and the Chromium Extension is active, there is nothing further you need to do. The kiosks should work as intended.
+
+## Authors
+
+Caleb Griffiths
+Contact: [caleb.griffiths@themetalcompany.co.nz](mailto:caleb.griffiths@themetalcompany.co.nz)
