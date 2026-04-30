@@ -22,6 +22,7 @@ if [ -f "$ASSETS_DIR/kiosk-background.png" ]; then
 fi
 
 sudo apt update
+sudo apt install -y xinput
 sudo apt install -y git
 sudo apt install -y chromium-browser || sudo apt install -y chromium
 
@@ -34,7 +35,7 @@ autologin-user=$USERNAME
 autologin-user-timeout=0
 EOF
 
-tee "$AUTOSTART_DIR/kiosk.desktop" > /dev/null <<'EOF'
+tee "$AUTOSTART_DIR/kiosk.desktop" > /dev/null <<EOF
 [Desktop Entry]
 Type=Application
 Name=Chromium Kiosk
@@ -47,11 +48,29 @@ if ! command -v chromium-browser >/dev/null 2>&1 && command -v chromium >/dev/nu
 	sed -i 's/^Exec=chromium-browser /Exec=chromium /' "$AUTOSTART_DIR/kiosk.desktop"
 fi
 
-tee "$AUTOSTART_DIR/display-awake.desktop" > /dev/null <<'EOF'
+tee "$AUTOSTART_DIR/display-awake.desktop" > /dev/null <<EOF
 [Desktop Entry]
 Type=Application
 Name=Keep Display Awake
 Exec=sh -c "xset s off && xset -dpms && xset s noblank"
+X-GNOME-Autostart-enabled=true
+Terminal=false
+EOF
+
+tee "$BASE_DIR/touch-calibration.sh" > /dev/null <<'EOF'
+#!/usr/bin/env bash
+sleep 5
+xinput set-prop "ILITEK Multi-Touch-V5000" "Coordinate Transformation Matrix" 0 -1 1  1 0 0  0 0 1
+xinput map-to-output "ILITEK Multi-Touch-V5000" eDP-1
+EOF
+
+chmod +x "$BASE_DIR/touch-calibration.sh"
+
+tee "$AUTOSTART_DIR/touch-calibration.desktop" > /dev/null <<EOF
+[Desktop Entry]
+Type=Application
+Name=Touch Screen Calibration
+Exec=$BASE_DIR/touch-calibration.sh
 X-GNOME-Autostart-enabled=true
 Terminal=false
 EOF
