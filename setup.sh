@@ -52,7 +52,7 @@ tee "$AUTOSTART_DIR/display-awake.desktop" > /dev/null <<EOF
 [Desktop Entry]
 Type=Application
 Name=Keep Display Awake
-Exec=sh -c "xset s off && xset -dpms && xset s noblank"
+Exec=sh -c "sleep 5; xset s off; xset -dpms; xset s noblank"
 X-GNOME-Autostart-enabled=true
 Terminal=false
 EOF
