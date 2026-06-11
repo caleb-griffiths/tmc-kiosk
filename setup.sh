@@ -22,9 +22,14 @@ if [ -f "$ASSETS_DIR/kiosk-background.png" ]; then
 fi
 
 sudo apt update
+sudo apt upgrade -y
 sudo apt install -y xinput
 sudo apt install -y git
 sudo apt install -y chromium-browser || sudo apt install -y chromium
+sudo apt install -y openssh-server
+
+sudo systemctl enable ssh
+sudo systemctl start ssh
 
 sudo adduser "$USERNAME" nopasswdlogin || true
 
@@ -103,6 +108,17 @@ if [ -f "$WALLPAPER_FILE" ]; then
 fi
 
 echo
-echo "***Setup complete. Please reboot now***"
-echo "***Unpacked Chromium Extension can be found here:***"
-echo "$BASE_DIR/pdf-blocker-extension"
+
+echo "███████╗███████╗████████╗██╗   ██╗██████╗                               "
+echo "██╔════╝██╔════╝╚══██╔══╝██║   ██║██╔══██╗                              "
+echo "███████╗█████╗     ██║   ██║   ██║██████╔╝                              "
+echo "╚════██║██╔══╝     ██║   ██║   ██║██╔═══╝                               "
+echo "███████║███████╗   ██║   ╚██████╔╝██║                                   "
+echo "╚══════╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝                                   "
+echo "                                                                        "
+echo " ██████╗ ██████╗ ███╗   ███╗██████╗ ██╗     ███████╗████████╗███████╗██╗"
+echo "██╔════╝██╔═══██╗████╗ ████║██╔══██╗██║     ██╔════╝╚══██╔══╝██╔════╝██║"
+echo "██║     ██║   ██║██╔████╔██║██████╔╝██║     █████╗     ██║   █████╗  ██║"
+echo "██║     ██║   ██║██║╚██╔╝██║██╔═══╝ ██║     ██╔══╝     ██║   ██╔══╝  ╚═╝"
+echo "╚██████╗╚██████╔╝██║ ╚═╝ ██║██║     ███████╗███████╗   ██║   ███████╗██╗"
+echo " ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚══════╝╚══════╝   ╚═╝   ╚══════╝╚═╝"
