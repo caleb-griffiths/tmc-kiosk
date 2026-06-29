@@ -82,6 +82,9 @@ This will immediately restart the Kiosks and will disconnect you from the SSH co
 
 ##
 > Author: Caleb Griffiths
+>
 > Date: 30/06/2026
+>
 > For: The Metal Company
+>
 > Version: 1.0
