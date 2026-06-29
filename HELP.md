@@ -1,5 +1,9 @@
 # TMC Kiosk Guide
 
+## Disclaimer
+
+*I understand that this document is fairly long. For the sake of time, if you do not wish to read or understand what is outlined in this document, please skip to the `Updating via SSH (Summary of Instructions)` section at the end of the document. Although it is highly recommended to know what you are doing and to understand what you are doing, it is not a requirement.*
+
 ## Scope
 
 In this guide I am to explain how to use and maintain the TMC Kiosks, which are running Linux instead of Windows. 
